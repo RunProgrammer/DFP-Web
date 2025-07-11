@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DFP Docs</title>
+  <link rel="stylesheet" href="styles/docs.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="container">
+      <h1 class="logo">DFP</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/index.html#features-section">Features</a></li>
+          <li><a href="docs.html">Docs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Docs & Support</h1>
+    </div>
+  </section>
+
+  <!-- Docs Navigation and Content -->
+  <section class="docs-nav">
+    <div class="container flex">
+
+      <!-- Sidebar -->
+      <!-- <div class="nav-sec">
+        <div class="cards">
+          <h3>Get Started 🚀</h3>
+          <nav>
+            <ul>
+              <li><a href="#installation">Installation</a></li>
+              <li><a href="#setup">Setup</a></li>
+              <li><a href="#usage">Usage</a></li>
+              <li><a href="#example">Example</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div> -->
+
+      <!-- Content Area -->
+      <div class="docs-container">
+        
+        <div id="whyDFP">
+          <h2>🤔 Why DFP</h2>
+          <!-- <p>DFP (Data Flag Protocol) is lightweight and modular. </p> -->
+          <p>DFP protocol is actually built for education purpose and to fullfill simple  needs . Why do i built it - Actually i just built it for fun and i though building it will help me through my understanding of what/how protocol and network works ⚙️.</p>
+          <p>But then i thought of making some custom rules for it and here it is my initial version my very basic yet functional custom protocol 🛠️.</p>
+          <br>
+        </div>
+        
+        
+        
+        <div id="installation">
+  <h2>📦 Installation</h2>
+  <p>i. Install via Pypi (pip)</p>
+  <pre><code>pip install dfp-protocol</code></pre>
+  <br>
+  <p>ii. Install via GitHub</p>
+  <pre><code>git clone https://github.com/RunProgrammer/DFP-Data-Flag-Protocol.git
+cd DFP-Data-Flag-Protocol
+pip install -r requirements.txt
+</code></pre>
+</div>
+<br>
+<br>
+
+<div id="setup">
+  <h2>⚙️ Setup</h2>
+  <p>Initializing the DFP Server</p>
+  <pre><code>python server.py  (or)
+python server.py --host 0.0.0.0 --port 8080</code></pre>
+<br>
+    <p>Connecting to via Client</p>
+    <pre><code>from dfp import DFPClient
+client = DFPClient()
+client.connect()
+print(client.send("PING", "Hello"))</code></pre>
+</div>
+
+<div id="usage">
+  <br>
+  <br>
+  <h2>🚨 Alteration</h2>
+  <p>The flags can be altered depending on the usage , which improves flexibility</p>
+  <h4>The flags can be altered in flags.py file</h4>
+  <br>
+  <pre><code>data_event = {"sensor_id": "temp1", "value": 95}
+flag = dfp.flag(data_event)</code></pre>
+<br>
+  <p>Use the CLI for testing or integration:</p>
+  <pre><code>dfp --rules flags.yaml --event sensor_event.json</code></pre>
+</div>
+<br>
+<br>
+<div id="example">
+  <h2>🚩 Flags</h2>
+  <p>Default Flags</p>
+  <pre><code>"PING"
+"DISCONNECT"
+"SEND"
+"RECEIVE"
+"LOGIN"
+"REGISTER"</code></pre>
+<p>*More Flags will be added soon....</p>
+</div>
+
+      </div>
+
+    </div>
+  </section>
+  <footer class="footer">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <h2>DFP</h2>
+            <p>Enhancing data integrity, one flag at a time.</p>
+          </div>
+      
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="docs.html">Docs</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-social">
+            <h4>Connect</h4>
+            <div class="social-icons">
+              <a href="https://github.com/RunProgrammer/DFP-Data-Flag-Protocol/tree/main"><img src="assets/github.svg" alt="GitHub"></a>
+              
+              <a href="http://linkedin.com/in/n-tarun"><img src="assets/link.svg" alt="LinkedIn"></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 DFP Protocol. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
